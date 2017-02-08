@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Delegate.BaseDelegate</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,11 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="BaseDelegate.cs" />
+    <Compile Include="FuncAction.cs" />
+    <Compile Include="FuncActionBenchmark.cs" />
+    <Compile Include="GenericDelegate.cs" />
+    <Compile Include="InstantDelegate.cs" />
+    <Compile Include="MulticastDelegate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppModel\AppModel.csproj">
+      <Project>{bccca3ad-7018-4582-b64c-aacb864a6ae6}</Project>
+      <Name>AppModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
